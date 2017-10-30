@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
+<html lang="en">
+   <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
       <title>Neighborhood Map</title>
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    </head>
-    <body>
-<div id="googleMap"></div>
-<form class="search box-shadow" data-bind="submit: submit">
-  <!-- " -->
-  <input placeholder="Search Here!" data-bind="textInput: filterString" />
-  <button type="submit" value="find!" data-bind="click: submit"><i class="fa fa-search"></i></button>
-</form>
-<!-- data-bind="css: {hidden: listHidden}" -->
-  <div class="list box-shadow" >
+   </head>
+   <body>
+      <div id="googleMap"></div>
+      <form class="search box-shadow" data-bind="submit: submit">
+         <input placeholder="Search Here!" data-bind="textInput: filterString" />
+         <button type="submit" value="find!" data-bind="click: submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="list box-shadow" >
+         <ul class="places" data-bind="foreach: places">
+            <li class="place" data-bind="event: {click: $parent.listClick}, visible: visible">
 
-    <ul class="places" data-bind="foreach: places">
-      <li class="place" data-bind="event: {click: $parent.listClick}, visible: visible"> <!--bussiness == place -->
-        <span class="name" data-bind="text: name"></span>
-
-      </li>
-    </ul>
-  </div>
-
-<script type="text/javascript" src="js/knockout-3.4.2.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjmewty9ErKkret0G3Y4Nv8EeY46GD1mE&callback=initMap" onerror="mapError()"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    </body>
-  </html>
+               <span class="name" data-bind="text: name"></span>
+            </li>
+         </ul>
+      </div>
+      <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <!--we upload at the bottom of html and async for a nice optimized site-->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjmewty9ErKkret0G3Y4Nv8EeY46GD1mE&callback=initMap" onerror="mapError()"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   </body>
+</html>

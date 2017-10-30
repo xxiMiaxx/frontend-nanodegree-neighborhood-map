@@ -4,123 +4,105 @@ html {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  overflow: hidden;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
 }
-
 #googleMap {
-  height: 100%;
-  width: 100%;
-  /*background-color: #ccc;*/
+    height: 100%;
+    width: 100%;
+    /*background-color: #ccc;*/
 }
-
 button {
-  border: none;
-  background: none;
-  height: 50px;
-  width: 50px;
-  font-size: 0.8em;
+    border: none;
+    background: none;
+    height: 50px;
+    width: 50px;
+    font-size: 0.8em;
 }
-
 button:hover {
-  cursor: pointer;
-  color: #1e88e5;
+    cursor: pointer;
+    color: #1e88e5;
 }
-
 .list {
-  position: absolute;
-	top: 70px;
-  border-radius: 2px;
-	z-index: 1;
-  right: 10px;
-  max-height: 399px;
-  width: 225px;
-  padding: 0;
-  color: #000;
-  background: #fff;
-  overflow: auto;
-  transition: transform 0.5s ease;
+    position: absolute;
+    top: 70px;
+    border-radius: 2px;
+    z-index: 1;
+    right: 10px;
+    max-height: 399px;
+    width: 225px;
+    padding: 0;
+    color: #000;
+    background: #fff;
+    overflow: auto;
+    transition: transform 0.5s ease;
 }
-
 form {
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  left: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
 }
-
-  input:focus {
+input:focus {
     outline: none;
-  }
-
-ul {
-  list-style: none;
 }
-  input {
+ul {
+    list-style: none;
+}
+input {
     border: none;
     height: 50px;
     width: 200px;
     padding: 0 15px;
     font-size: 0.8em;
     background: none;
-  }
-
+}
 .search {
-  margin: 0;
-  padding: 0;
-  border-radius: 2px;
-  background: #fff;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    background: #fff;
 }
-
 .box-shadow {
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
-
 .places {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-
 .place {
-  padding: 15px;
-  font-size: 0.8em;
-  border-bottom: 1px solid #ddd;
+    padding: 15px;
+    font-size: 0.8em;
+    border-bottom: 1px solid #ddd;
 }
-
 .place:hover {
-  background: #ddd;
-  cursor: pointer;
+    background: #ddd;
+    cursor: pointer;
 }
-
 span {
-  display: block;
+    display: block;
 }
-
 .title {
-  font-weight: bold;
+    font-weight: bold;
 }
-
 .bus-img img {
-  width: 100px;
-
+    width: 100px;
 }
-
-@media screen and (max-width: 450px){
-  input {
-    width: 150px;
-  }
+@media screen and (max-width: 450px) {
+    input {
+        width: 150px;
+    }
 }
-
 .info {
-  display: flex;
-  flex-wrap: wrap;
-  width: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
 }
