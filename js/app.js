@@ -13,6 +13,7 @@ function place(name, coordin, img, visible, catagory) {
 
 function viewModel() {
     var self = this;
+    // array of all the places
     self.places = ko.observableArray([
         new place(
             "Kingdom Centre", {
@@ -55,6 +56,7 @@ function viewModel() {
             true,
             "hotel")
     ]);
+    // getting the input from the input box
     self.filterString = ko.observable("");
 
     self.submit = function () {
@@ -64,7 +66,7 @@ function viewModel() {
         }
         undoMarker(filterString); //<<<<<<<<<<<
         infoWindow.close();
-    }
+    };
 
     self.listClick = function (location) {
         //loop in the markers array to match marker with location
@@ -74,7 +76,7 @@ function viewModel() {
                 popUpInfoWindow(location);
             }
         }
-    }
+    };
 
 } //end
 function undoMarker(filterStrig) {
