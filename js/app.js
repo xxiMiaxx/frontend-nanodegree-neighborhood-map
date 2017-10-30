@@ -64,7 +64,7 @@ function viewModel() {
             var name = self.places()[i].name();
             self.places()[i].visible((name.indexOf(self.filterString) > -1) ? true : false);
         }
-        undoMarker(filterString); //<<<<<<<<<<<
+        undoMarker(filterString); //doing/undoing based on marker visible value
         infoWindow.close();
     };
 
@@ -79,6 +79,7 @@ function viewModel() {
     };
 
 } //end
+// erasing markers once filtered
 function undoMarker(filterStrig) {
     for (var i = 0; i < markers.length; i++) {
         var name = markers[i].loc.name();
@@ -89,6 +90,7 @@ function undoMarker(filterStrig) {
         }
     }
 }
+//knockoutbinding with index.html
 ko.applyBindings(new viewModel());
 // google map error function
 function mapError() {
@@ -106,6 +108,7 @@ function initMap() {
         lat: 24.7135517,
         lng: 46.67529569999999
     };
+    //set where we want the map to be
     map = new google.maps.Map(mapElemnt, {
         center: uluru,
         zoom: 13,
@@ -113,6 +116,7 @@ function initMap() {
             position: google.maps.ControlPosition.LEFT_BOTTOM
         }
     });
+    //creating markers for every place
     for (var i = 0; i < vm.places().length; i++) {
         var loc = vm.places()[i];
         var marker = new google.maps.Marker({
@@ -122,12 +126,12 @@ function initMap() {
             animation: null
         });
         loc.markerObject = marker;
-        marker.addListener('click', onClickMarker); //<<<<<<<<<
+        marker.addListener('click', onClickMarker); // when a marker is clicked run the function that animates
         markers.push(marker);
     }
 
 }
-
+// a function that animates what happens when a marker is clicked
 function onClickMarker() {
     var self = this;
     self.setAnimation(4);
