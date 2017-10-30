@@ -66,34 +66,6 @@ function viewModel() {
         infoWindow.close();
     }
 
-    // if(self.filterString() !== ""){
-    //   // split the search word
-    //   var words= self.filterString().toLowerCase().split(' ');
-    //   words.forEach(function(word){
-    //     self.places().forEach(function(place){
-    //       place.visible(false);
-    //       place.marker.setMap(null);
-    //       // if a word in the search matches the name or catagory set place and marker visible
-    //       if (place.name.toLowerCase().indexOf(word) !== -1 || place.category.toLowerCase().indexOf(word) !== -1) {
-    //         place.visible(true);
-    //         place.marker.setMap(map);}
-    //         // undoMark(filterString); //<<<<<<<<<<<
-    //         // infoWindow.close();
-    //     });
-    //   });
-    //
-    // }
-    // // if the search query is empty
-    // else if(self.filterString() === ''){
-    //   self.places().forEach(function(place){
-    //     place.visible(true);
-    //     place.marker.setMap(map);
-    //   });
-    // }
-
-    // } //end filter
-
-
     self.listClick = function (location) {
         //loop in the markers array to match marker with location
         for (var i = 0; i < markers.length; i++) {
@@ -159,9 +131,6 @@ function onClickMarker() {
     self.setAnimation(4);
     popUpInfoWindow(self.loc);
 }
-
-
-
 
 var infoWindow = null;
 
