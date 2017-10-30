@@ -20,6 +20,19 @@ html, body {
   /*background-color: #ccc;*/
 }
 
+button {
+  border: none;
+  background: none;
+  height: 50px;
+  width: 50px;
+  font-size: 0.8em;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #1e88e5;
+}
+
 .list {
   position: absolute;
 	top: 70px;
@@ -41,6 +54,22 @@ form {
   top: 10px;
   left: 10px;
 }
+
+  input:focus {
+    outline: none;
+  }
+
+ul {
+  list-style: none;
+}
+  input {
+    border: none;
+    height: 50px;
+    width: 200px;
+    padding: 0 15px;
+    font-size: 0.8em;
+    background: none;
+  }
 
 .search {
   margin: 0;
@@ -64,4 +93,34 @@ form {
   padding: 15px;
   font-size: 0.8em;
   border-bottom: 1px solid #ddd;
+}
+
+.place:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.bus-img img {
+  width: 100px;
+
+}
+
+@media screen and (max-width: 450px){
+  input {
+    width: 150px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
 }
