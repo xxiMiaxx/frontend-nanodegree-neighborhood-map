@@ -3,3 +3,4 @@ Udacity frontend nanodegree neighborhood map is a single page application that u
 
 # How to return
   download the repo and open index.html in your browser.
+  Or just click  [here](https://xximiaxx.github.io/frontend-nanodegree-neighborhood-map/.)
