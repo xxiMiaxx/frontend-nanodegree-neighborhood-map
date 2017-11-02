@@ -57,12 +57,13 @@ function viewModel() {
             "hotel")
     ]);
     // getting the input from the input box
-    self.filterString = ko.observable("");
+    self.filterString = ko.observable('');
 
     self.submit = function () {
+      var filterString =  self.filterString();
         for (var i = 0; i < self.places().length; i++) {
             var name = self.places()[i].name();
-            self.places()[i].visible((name.indexOf(self.filterString) > -1) ? true : false);
+            self.places()[i].visible((name.indexOf(filterString) > -1) ? true : false);
         }
         undoMarker(filterString); //doing/undoing based on marker visible value
         infoWindow.close();
@@ -80,7 +81,7 @@ function viewModel() {
 
 } //end
 // erasing markers once filtered
-function undoMarker(filterStrig) {
+function undoMarker(filterString) {
     for (var i = 0; i < markers.length; i++) {
         var name = markers[i].loc.name();
         if (name.indexOf(filterString) > -1) {
